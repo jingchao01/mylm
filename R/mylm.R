@@ -10,11 +10,11 @@
 #' @examples
 #' # Example usage:
 #' set.seed(123)
-#' large_data <- data.frame(
+#' data <- data.frame(
 #'   x = rnorm(1000),
 #'   y = 3 * rnorm(1000) + 5
 #' )
-#' model <- my_lm(y ~ x, data)
+#' model <- help(my_lm(y ~ x, data)
 #' print(model$coefficients)
 #' print(model$fitted.values)
 #' @export

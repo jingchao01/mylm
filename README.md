@@ -4,7 +4,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of mylm is to provide a simple implementation of simple linear regression models.
+The goal of mylm package is to provide a simple implementation of simple linear regression models. The function in this package is "my_lm"
     It supports efficient computation using matrix algebra and includes integration 
     with C++ for improved performance via the Rcpp package.
     This package is ideal for lightweight alternative to base R's `lm` function.
