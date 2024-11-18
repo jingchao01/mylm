@@ -1,0 +1,61 @@
+---
+title: "Using mylm Package for Linear Regression"
+author: "Your Name"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Using mylm Package for Linear Regression}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+library(mylm)
+library(bench)
+
+```
+
+Description: The mylm package provides a simple linear regression model function, my_lm, which allows the user to specify the regression formula and fit the model.
+
+```{r setup}
+set.seed(123)
+data <- data.frame(
+  x = rnorm(1000),
+  y = 3 * rnorm(1000) + 5
+)
+model <- my_lm(y ~ x, data)
+#model$coefficients
+#model$fitted.values
+
+```
+
+
+model$coefficients: returns the estimated regression coefficients. For the example data, the coefficients should be close to an intercept of 1 and a slope of 2.
+
+
+model$fitted.values: Returns the fitted values of the model, i.e. the predicted values given the independent variable x.
+
+
+Comparison against the original R functions on simulated dataset to demonstrate correctness via all.equal()
+```{r}
+base_model <- lm(y ~ x, data)
+#coef(base_model)
+all.equal(as.vector(model$coefficients), as.vector(coef(base_model)), tolerance = 1e-8)
+```
+
+
+Comparison against the original R functions on simulated dataset to demonstrate efficiency via bench::mark()
+```{r}
+bench::mark(
+  base_model = lm(y ~ x, data = data),
+  model = my_lm(y ~ x, data = data),
+  check = FALSE
+)
+```
+
+
+

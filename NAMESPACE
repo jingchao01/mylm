@@ -1,0 +1,3 @@
+exportPattern("^[[:alpha:]]+")
+useDynLib(mylm, .registration = TRUE)
+import(Rcpp)

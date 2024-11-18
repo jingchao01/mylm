@@ -1,0 +1,25 @@
+Package: mylm
+Type: Package
+Title: Simple Linear Regression Model Implementation
+Version: 0.1.0
+Author: Jingchao Yang
+Maintainer: Jingchao Yang jingchao@umich.edu
+Description: `mylm` provides a simple implementation of simple linear regression models.
+    It supports efficient computation using matrix algebra and includes integration 
+    with C++ for improved performance via the Rcpp package.
+    This package is ideal for lightweight alternative to base R's `lm` function.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+LinkingTo: 
+    Rcpp
+Imports: 
+    Rcpp
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+VignetteBuilder: knitr
