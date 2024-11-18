@@ -2,6 +2,8 @@
 # mylm
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/jingchao01/mylm/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jingchao01/mylm/actions/workflows/R-CMD-check.yaml)
+[![Codecov test coverage](https://codecov.io/gh/jingchao01/mylm/graph/badge.svg)](https://app.codecov.io/gh/jingchao01/mylm)
 <!-- badges: end -->
 
 The goal of mylm package is to provide a simple implementation of simple linear regression models. The function in this package is "my_lm.
