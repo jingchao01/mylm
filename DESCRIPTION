@@ -2,8 +2,8 @@ Package: mylm
 Type: Package
 Title: Simple Linear Regression Model Implementation
 Version: 0.1.0
-Author: Jingchao Yang
-Maintainer: Jingchao Yang jingchao@umich.edu
+Author: Jingchao
+Maintainer: Jingchao <jingchao@umich.edu>
 Description: `mylm` provides a simple implementation of simple linear regression models.
     It supports efficient computation using matrix algebra and includes integration 
     with C++ for improved performance via the Rcpp package.
