@@ -33,7 +33,7 @@ data <- data.frame(
   y = 3 * rnorm(1000) + 5
 )
 
-model <- my_lm(y ~ x, data)
+model <- SLM(y ~ x, data)
 
 model$coefficients
 model$fitted.values

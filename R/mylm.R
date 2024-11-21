@@ -14,11 +14,11 @@
 #'   x = rnorm(1000),
 #'   y = 3 * rnorm(1000) + 5
 #' )
-#' model <- help(my_lm(y ~ x, data)
+#' model <- help(SLM(y ~ x, data)
 #' print(model$coefficients)
 #' print(model$fitted.values)
 #' @export
-my_lm <- function(formula, data) {
+SLM <- function(formula, data) {
 
 #Construct the design matrix X and the response variables y.
   y <- model.response(model.frame(formula, data))

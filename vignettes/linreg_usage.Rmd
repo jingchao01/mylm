@@ -19,7 +19,7 @@ library(bench)
 
 ```
 
-Description: The mylm package provides a simple linear regression model function, my_lm, which allows the user to specify the regression formula and fit the model.
+Description: The mylm package provides a simple linear regression model function - 'SLR', which allows the user to specify the regression formula and fit the model.
 
 ```{r setup}
 set.seed(123)
@@ -27,7 +27,7 @@ data <- data.frame(
   x = rnorm(1000),
   y = 3 * rnorm(1000) + 5
 )
-model <- my_lm(y ~ x, data)
+model <- SLR(y ~ x, data)
 #model$coefficients
 #model$fitted.values
 
@@ -52,7 +52,7 @@ Comparison against the original R functions on simulated dataset to demonstrate 
 ```{r}
 bench::mark(
   base_model = lm(y ~ x, data = data),
-  model = my_lm(y ~ x, data = data),
+  model = SLR(y ~ x, data = data),
   check = FALSE
 )
 ```
