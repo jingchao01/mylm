@@ -6,7 +6,7 @@
 [![Codecov test coverage](https://codecov.io/gh/jingchao01/mylm/graph/badge.svg)](https://app.codecov.io/gh/jingchao01/mylm)
 <!-- badges: end -->
 
-The goal of mylm package is to provide a simple implementation of simple linear regression models. The function in this package is "my_lm.
+The goal of mylm package is to provide a simple implementation of simple linear regression models. The function in this package is "SLM".
     It supports efficient computation using matrix algebra and includes integration 
     with C++ for improved performance via the Rcpp package.
     This package is ideal for lightweight alternative to base R's `lm` function.
